@@ -9,7 +9,7 @@ fn get_app_dir() -> PathBuf {
 
   // only go up three folders max
   while count <= 2 {
-    let test_path = dir.join("src-tauri/tauri.conf.json");
+    let test_path = dir.join("tauri.conf.json");
     if test_path.exists() {
       return dir;
     }
@@ -31,5 +31,5 @@ pub fn app_dir() -> &'static PathBuf {
 }
 
 pub fn tauri_dir() -> PathBuf {
-  app_dir().join("src-tauri")
+  app_dir().join("")
 }

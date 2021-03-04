@@ -365,7 +365,7 @@ mod test {
   use crate::{Context, FromTauriContext};
 
   #[derive(FromTauriContext)]
-  #[config_path = "test/fixture/src-tauri/tauri.conf.json"]
+  #[config_path = "test/fixture/tauri.conf.json"]
   struct TauriContext;
 
   #[test]

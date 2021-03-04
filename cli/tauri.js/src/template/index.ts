@@ -70,7 +70,7 @@ const injectTemplate = (
   injectPath: string,
   { force, logging, tauriPath }: InjectOptions
 ): boolean | undefined => {
-  const dir = normalize(join(injectPath, 'src-tauri'))
+  const dir = normalize(join(injectPath))
   if (existsSync(dir) && force !== 'template' && force !== 'all') {
     warn(`Tauri dir (${dir}) not empty.
 Run \`tauri init --force template\` to overwrite.`)
@@ -97,7 +97,7 @@ Run \`tauri init --force template\` to overwrite.`)
 
   removeSync(dir)
   copyTemplates({
-    source: resolve(__dirname, '../../templates/src-tauri'),
+    source: resolve(__dirname, '../../templates'),
     scope: {
       tauriDep
     },
@@ -120,11 +120,7 @@ const inject = (
     injectTemplate(injectPath, { force, logging, tauriPath })
   }
   if (type === 'conf' || type === 'all') {
-    injectConfFile(
-      join(injectPath, 'src-tauri'),
-      { force, logging },
-      customConfig
-    )
+    injectConfFile(join(injectPath), { force, logging }, customConfig)
   }
   return true
 }

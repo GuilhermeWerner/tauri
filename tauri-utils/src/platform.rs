@@ -56,7 +56,7 @@ pub fn target_triple() -> crate::Result<String> {
 /// On Windows, it's the path to the executable.
 ///
 /// On Linux, it's `/usr/lib/${exe_name}` when running the bundled app,
-/// and `${exe_dir}/../lib/${exe_name}` when running the app from `src-tauri/target/(debug|release)/`.
+/// and `${exe_dir}/../lib/${exe_name}` when running the app from `target/(debug|release)/`.
 ///
 /// On MacOS, it's `${exe_dir}../Resources` (inside .app).
 pub fn resource_dir() -> crate::Result<PathBuf> {

@@ -39,7 +39,7 @@ if (argv.help) {
     --help, -h          Displays this message
     --log, l            Logging [boolean]
     --icon, i           Source icon (png, 1240x1240 with transparency)
-    --target, t         Target folder (default: 'src-tauri/icons')
+    --target, t         Target folder (default: 'icons')
     --compression, c    Compression type [pngquant|optipng|zopfli]
     `)
   process.exit(0)

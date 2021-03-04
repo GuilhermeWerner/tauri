@@ -10,7 +10,7 @@
 //     data.tar.gz             # Contains files to be installed:
 //         usr/bin/foobar                            # Binary executable file
 //         usr/share/applications/foobar.desktop     # Desktop file (for apps)
-//         usr/share/icons/hicolor/...               # Icon files (for apps)
+//         usr/share/Content/hicolor/...               # Icon files (for apps)
 //         usr/lib/foobar/...                        # Other resource files
 //
 // For cargo-bundle, we put bundle resource files under /usr/lib/package_name/,
@@ -300,7 +300,7 @@ fn transfer_resource_files(settings: &Settings, data_dir: &Path) -> crate::Resul
 
 /// Generate the icon files and store them under the `data_dir`.
 fn generate_icon_files(settings: &Settings, data_dir: &PathBuf) -> crate::Result<()> {
-  let base_dir = data_dir.join("usr/share/icons/hicolor");
+  let base_dir = data_dir.join("usr/share/Content/hicolor");
   let get_dest_path = |width: u32, height: u32, is_high_density: bool| {
     base_dir.join(format!(
       "{}x{}{}/apps/{}.png",

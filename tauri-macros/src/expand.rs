@@ -43,7 +43,7 @@ pub(crate) fn load_context(input: DeriveInput) -> Result<TokenStream, Error> {
 
   #[cfg(windows)]
   let default_window_icon = {
-    let icon_path = config_dir.join("./icons/icon.ico").display().to_string();
+    let icon_path = config_dir.join("./Content/Icon.ico").display().to_string();
     quote! {
       Some(include_bytes!(#icon_path))
     }

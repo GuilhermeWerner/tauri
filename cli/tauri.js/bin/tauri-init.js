@@ -53,7 +53,7 @@ function printUsage() {
     --help, -h           Displays this message
     --app-name, -a       Name of your Tauri application
     --window-title, -w   Window title of your Tauri application
-    --dist-dir, -d       Web assets location, relative to <project-dir>/src-tauri
+    --dist-dir, -d       Web assets location, relative to <project-dir>
     --dev-path, -p       Url of your dev server
     --ci                 Skip prompts
     --force, -f          Force init to overwrite [conf|template|all]
@@ -101,7 +101,7 @@ const getOptionsInteractive = (argv) => {
         type: 'input',
         name: 'build.distDir',
         message:
-          'Where are your web assets (HTML/CSS/JS) located, relative to the "<current dir>/src-tauri" folder that will be created?',
+          'Where are your web assets (HTML/CSS/JS) located, relative to the "<current dir>" folder that will be created?',
         default: '../dist',
         when: () => !argv.d
       }

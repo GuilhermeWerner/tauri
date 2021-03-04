@@ -6402,7 +6402,7 @@ please-upgrade-node@^3.2.0:
 
 png2icons@2.0.1:
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/png2icons/-/png2icons-2.0.1.tgz#09d8f10b71302e98ca178d3324bc4deff9b90124"
+  resolved "https://registry.yarnpkg.com/png2Content/-/png2icons-2.0.1.tgz#09d8f10b71302e98ca178d3324bc4deff9b90124"
   integrity sha512-GDEQJr8OG4e6JMp7mABtXFSEpgJa1CCpbQiAR+EjhkHJHnUL9zPPtbOrjsMD8gUbikgv3j7x404b0YJsV3aVFA==
 
 pngquant-bin@^6.0.0:

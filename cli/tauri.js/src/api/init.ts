@@ -24,7 +24,7 @@ module.exports = (args: {
     args.customConfig
   )
   if (args.appName) {
-    const manifestPath = resolve(args.directory, 'src-tauri/Cargo.toml')
+    const manifestPath = resolve(args.directory, 'Cargo.toml')
     const cargoManifest = (toml.parse(
       readFileSync(manifestPath).toString()
     ) as unknown) as CargoManifest

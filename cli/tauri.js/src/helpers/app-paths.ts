@@ -15,7 +15,7 @@ const getAppDir = (): string => {
 
   // only go up three folders max
   while (dir.length > 0 && !dir.endsWith(sep) && count <= 2) {
-    if (existsSync(join(dir, 'src-tauri', 'tauri.conf.json'))) {
+    if (existsSync(join(dir, 'tauri.conf.json'))) {
       return dir
     }
     count++

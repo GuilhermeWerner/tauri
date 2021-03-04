@@ -316,8 +316,8 @@ mod tests {
 
   #[test]
   fn retina_icon_paths() {
-    assert!(!is_retina("data/icons/512x512.png"));
-    assert!(is_retina("data/icons/512x512@2x.png"));
+    assert!(!is_retina("data/Content/512x512.png"));
+    assert!(is_retina("data/Content/512x512@2x.png"));
   }
 
   #[test]

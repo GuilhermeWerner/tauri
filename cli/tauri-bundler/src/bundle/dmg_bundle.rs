@@ -81,7 +81,7 @@ pub fn bundle_project(settings: &Settings) -> crate::Result<Vec<PathBuf>> {
     "--volname",
     &package_base_name,
     "--volicon",
-    "../../../../icons/icon.icns",
+    "../../../../Content/Icon.icns",
     "--icon",
     &bundle_name,
     "180",

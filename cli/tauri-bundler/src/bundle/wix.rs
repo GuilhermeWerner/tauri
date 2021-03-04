@@ -491,7 +491,7 @@ pub fn build_wix_app_installer(
 
   data.insert("app_exe_source", to_json(&app_exe_source));
 
-  // copy icon from $CWD/icons/icon.ico folder to resource folder near msi
+  // copy icon from $CWD/Content/Icon.ico folder to resource folder near msi
   let icon_path = copy_icon(&settings)?;
 
   data.insert("icon_path", to_json(icon_path));

@@ -23,10 +23,7 @@ function runBuildTest(args) {
       await build(args).promise
 
       const artifactFolder = args.debug ? 'debug' : 'release'
-      const artifactPath = path.resolve(
-        appDir,
-        `src-tauri/target/${artifactFolder}/app`
-      )
+      const artifactPath = path.resolve(appDir, `target/${artifactFolder}/app`)
 
       const appPid = spawn(
         process.platform === 'win32'
